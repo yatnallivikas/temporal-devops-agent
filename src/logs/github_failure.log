@@ -1,327 +1,327 @@
 
 
 ===== 0_build.txt =====
-﻿2026-05-20T09:00:55.1232794Z Current runner version: '2.334.0'
-2026-05-20T09:00:55.1259527Z ##[group]Runner Image Provisioner
-2026-05-20T09:00:55.1260474Z Hosted Compute Agent
-2026-05-20T09:00:55.1261013Z Version: 20260213.493
-2026-05-20T09:00:55.1261639Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
-2026-05-20T09:00:55.1262439Z Build Date: 2026-02-13T00:28:41Z
-2026-05-20T09:00:55.1263107Z Worker ID: {465dd1ec-34c6-470c-a92f-dc76ab467603}
-2026-05-20T09:00:55.1263822Z Azure Region: northcentralus
-2026-05-20T09:00:55.1264535Z ##[endgroup]
-2026-05-20T09:00:55.1265978Z ##[group]Operating System
-2026-05-20T09:00:55.1266538Z Ubuntu
-2026-05-20T09:00:55.1267041Z 24.04.4
-2026-05-20T09:00:55.1267559Z LTS
-2026-05-20T09:00:55.1268047Z ##[endgroup]
-2026-05-20T09:00:55.1268511Z ##[group]Runner Image
-2026-05-20T09:00:55.1269115Z Image: ubuntu-24.04
-2026-05-20T09:00:55.1269651Z Version: 20260513.135.3
-2026-05-20T09:00:55.1270970Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
-2026-05-20T09:00:55.1272419Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
-2026-05-20T09:00:55.1273355Z ##[endgroup]
-2026-05-20T09:00:55.1274669Z ##[group]GITHUB_TOKEN Permissions
-2026-05-20T09:00:55.1276620Z Contents: read
-2026-05-20T09:00:55.1277204Z Metadata: read
-2026-05-20T09:00:55.1277759Z Packages: read
-2026-05-20T09:00:55.1278232Z ##[endgroup]
-2026-05-20T09:00:55.1280588Z Secret source: Actions
-2026-05-20T09:00:55.1281274Z Prepare workflow directory
-2026-05-20T09:00:55.1678590Z Prepare all required actions
-2026-05-20T09:00:55.1717492Z Getting action download info
-2026-05-20T09:00:55.6036115Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
-2026-05-20T09:00:55.7188005Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
-2026-05-20T09:00:55.9103119Z Complete job name: build
-2026-05-20T09:00:55.9840752Z ##[group]Run actions/checkout@v4
-2026-05-20T09:00:55.9841671Z with:
-2026-05-20T09:00:55.9842204Z   repository: yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:55.9843101Z   token: ***
-2026-05-20T09:00:55.9843523Z   ssh-strict: true
-2026-05-20T09:00:55.9843963Z   ssh-user: git
-2026-05-20T09:00:55.9844624Z   persist-credentials: true
-2026-05-20T09:00:55.9845095Z   clean: true
-2026-05-20T09:00:55.9845541Z   sparse-checkout-cone-mode: true
-2026-05-20T09:00:55.9846055Z   fetch-depth: 1
-2026-05-20T09:00:55.9846481Z   fetch-tags: false
-2026-05-20T09:00:55.9846914Z   show-progress: true
-2026-05-20T09:00:55.9847358Z   lfs: false
-2026-05-20T09:00:55.9847746Z   submodules: false
-2026-05-20T09:00:55.9848188Z   set-safe-directory: true
-2026-05-20T09:00:55.9848882Z ##[endgroup]
-2026-05-20T09:00:56.1033821Z Syncing repository: yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.1037321Z ##[group]Getting Git version info
-2026-05-20T09:00:56.1038902Z Working directory is '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
-2026-05-20T09:00:56.1040645Z [command]/usr/bin/git version
-2026-05-20T09:00:56.1107360Z git version 2.54.0
-2026-05-20T09:00:56.1132942Z ##[endgroup]
-2026-05-20T09:00:56.1149164Z Temporarily overriding HOME='/home/runner/work/_temp/174c16c3-9c2e-4003-9e48-c7ba1e932ca4' before making global git config changes
-2026-05-20T09:00:56.1150574Z Adding repository directory to the temporary git global config as a safe directory
-2026-05-20T09:00:56.1163269Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:56.1214690Z Deleting the contents of '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
-2026-05-20T09:00:56.1218308Z ##[group]Initializing the repository
-2026-05-20T09:00:56.1222889Z [command]/usr/bin/git init /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:56.1320183Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-05-20T09:00:56.1321432Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-05-20T09:00:56.1322967Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-05-20T09:00:56.1324406Z hint: call:
-2026-05-20T09:00:56.1325446Z hint:
-2026-05-20T09:00:56.1326239Z hint: 	git config --global init.defaultBranch <name>
-2026-05-20T09:00:56.1327271Z hint:
-2026-05-20T09:00:56.1328000Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-05-20T09:00:56.1328947Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-05-20T09:00:56.1329698Z hint:
-2026-05-20T09:00:56.1330090Z hint: 	git branch -m <name>
-2026-05-20T09:00:56.1330562Z hint:
-2026-05-20T09:00:56.1331167Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-05-20T09:00:56.1332751Z Initialized empty Git repository in /home/runner/work/temporal-devops-agent/temporal-devops-agent/.git/
-2026-05-20T09:00:56.1339993Z [command]/usr/bin/git remote add origin https://github.com/yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.1387340Z ##[endgroup]
-2026-05-20T09:00:56.1388125Z ##[group]Disabling automatic garbage collection
-2026-05-20T09:00:56.1391590Z [command]/usr/bin/git config --local gc.auto 0
-2026-05-20T09:00:56.1427334Z ##[endgroup]
-2026-05-20T09:00:56.1428558Z ##[group]Setting up auth
-2026-05-20T09:00:56.1434708Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-05-20T09:00:56.1475719Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-05-20T09:00:56.1849483Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-05-20T09:00:56.1886049Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-05-20T09:00:56.2142566Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-05-20T09:00:56.2185068Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-05-20T09:00:56.2435394Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-05-20T09:00:56.2474042Z ##[endgroup]
-2026-05-20T09:00:56.2475607Z ##[group]Fetching the repository
-2026-05-20T09:00:56.2484550Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +13de75476c8f38054b1e72da5a7d3918e438218e:refs/remotes/origin/main
-2026-05-20T09:00:56.5561977Z From https://github.com/yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.5563286Z  * [new ref]         13de75476c8f38054b1e72da5a7d3918e438218e -> origin/main
-2026-05-20T09:00:56.5597353Z ##[endgroup]
-2026-05-20T09:00:56.5600629Z ##[group]Determining the checkout info
-2026-05-20T09:00:56.5601774Z ##[endgroup]
-2026-05-20T09:00:56.5605202Z [command]/usr/bin/git sparse-checkout disable
-2026-05-20T09:00:56.5649428Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-05-20T09:00:56.5677631Z ##[group]Checking out the ref
-2026-05-20T09:00:56.5680662Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-05-20T09:00:56.5727070Z Switched to a new branch 'main'
-2026-05-20T09:00:56.5729391Z branch 'main' set up to track 'origin/main'.
-2026-05-20T09:00:56.5737219Z ##[endgroup]
-2026-05-20T09:00:56.5776749Z [command]/usr/bin/git log -1 --format=%H
-2026-05-20T09:00:56.5800521Z 13de75476c8f38054b1e72da5a7d3918e438218e
-2026-05-20T09:00:56.6139308Z ##[group]Run actions/setup-python@v5
-2026-05-20T09:00:56.6140485Z with:
-2026-05-20T09:00:56.6141295Z   python-version: 3.11
-2026-05-20T09:00:56.6142230Z   check-latest: false
-2026-05-20T09:00:56.6143465Z   token: ***
-2026-05-20T09:00:56.6144461Z   update-environment: true
-2026-05-20T09:00:56.6145498Z   allow-prereleases: false
-2026-05-20T09:00:56.6146767Z   freethreaded: false
-2026-05-20T09:00:56.6147689Z ##[endgroup]
-2026-05-20T09:00:56.7922268Z ##[group]Installed versions
-2026-05-20T09:00:56.8015093Z Successfully set up CPython (3.11.15)
-2026-05-20T09:00:56.8017370Z ##[endgroup]
-2026-05-20T09:00:56.8177519Z ##[group]Run python src/app.py
-2026-05-20T09:00:56.8178625Z [36;1mpython src/app.py[0m
-2026-05-20T09:00:56.8234344Z shell: /usr/bin/bash -e {0}
-2026-05-20T09:00:56.8235321Z env:
-2026-05-20T09:00:56.8236286Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8238001Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
-2026-05-20T09:00:56.8239701Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8241214Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8242755Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8244473Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
-2026-05-20T09:00:56.8245798Z ##[endgroup]
-2026-05-20T09:00:56.8661680Z Traceback (most recent call last):
-2026-05-20T09:00:56.8672376Z   File "/home/runner/work/temporal-devops-agent/temporal-devops-agent/src/app.py", line 1, in <module>
-2026-05-20T09:00:56.8675941Z     import pandas
-2026-05-20T09:00:56.8677351Z ModuleNotFoundError: No module named 'pandas'
-2026-05-20T09:00:56.8712167Z ##[error]Process completed with exit code 1.
-2026-05-20T09:00:56.8922745Z Post job cleanup.
-2026-05-20T09:00:56.9963418Z [command]/usr/bin/git version
-2026-05-20T09:00:57.0000790Z git version 2.54.0
-2026-05-20T09:00:57.0044226Z Temporarily overriding HOME='/home/runner/work/_temp/bb9ab0f5-5b66-4bdb-949e-61d9b94002aa' before making global git config changes
-2026-05-20T09:00:57.0125727Z Adding repository directory to the temporary git global config as a safe directory
-2026-05-20T09:00:57.0129357Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:57.0135424Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-05-20T09:00:57.0141597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-05-20T09:00:57.0376697Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-05-20T09:00:57.0403388Z http.https://github.com/.extraheader
-2026-05-20T09:00:57.0419033Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2026-05-20T09:00:57.0456490Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-05-20T09:00:57.0704763Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-05-20T09:00:57.0741572Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-05-20T09:00:57.1123299Z Cleaning up orphan processes
-2026-05-20T09:00:57.1510336Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+﻿2026-05-21T06:21:53.9552917Z Current runner version: '2.334.0'
+2026-05-21T06:21:53.9575201Z ##[group]Runner Image Provisioner
+2026-05-21T06:21:53.9575988Z Hosted Compute Agent
+2026-05-21T06:21:53.9576462Z Version: 20260213.493
+2026-05-21T06:21:53.9577050Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-21T06:21:53.9577646Z Build Date: 2026-02-13T00:28:41Z
+2026-05-21T06:21:53.9578234Z Worker ID: {675e7552-2c8d-4077-9966-2af1c344bd75}
+2026-05-21T06:21:53.9578830Z Azure Region: westcentralus
+2026-05-21T06:21:53.9579357Z ##[endgroup]
+2026-05-21T06:21:53.9580564Z ##[group]Operating System
+2026-05-21T06:21:53.9581175Z Ubuntu
+2026-05-21T06:21:53.9581591Z 24.04.4
+2026-05-21T06:21:53.9581954Z LTS
+2026-05-21T06:21:53.9582404Z ##[endgroup]
+2026-05-21T06:21:53.9582806Z ##[group]Runner Image
+2026-05-21T06:21:53.9583269Z Image: ubuntu-24.04
+2026-05-21T06:21:53.9583746Z Version: 20260513.135.3
+2026-05-21T06:21:53.9584946Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-21T06:21:53.9586209Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-21T06:21:53.9586995Z ##[endgroup]
+2026-05-21T06:21:53.9587930Z ##[group]GITHUB_TOKEN Permissions
+2026-05-21T06:21:53.9589659Z Contents: read
+2026-05-21T06:21:53.9590117Z Metadata: read
+2026-05-21T06:21:53.9590565Z Packages: read
+2026-05-21T06:21:53.9591095Z ##[endgroup]
+2026-05-21T06:21:53.9593048Z Secret source: Actions
+2026-05-21T06:21:53.9593686Z Prepare workflow directory
+2026-05-21T06:21:53.9925846Z Prepare all required actions
+2026-05-21T06:21:53.9980276Z Getting action download info
+2026-05-21T06:21:54.4461298Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-21T06:21:54.5963120Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-05-21T06:21:54.7488584Z Complete job name: build
+2026-05-21T06:21:54.8127938Z ##[group]Run actions/checkout@v4
+2026-05-21T06:21:54.8128930Z with:
+2026-05-21T06:21:54.8129513Z   repository: yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.8130418Z   token: ***
+2026-05-21T06:21:54.8130884Z   ssh-strict: true
+2026-05-21T06:21:54.8131419Z   ssh-user: git
+2026-05-21T06:21:54.8131881Z   persist-credentials: true
+2026-05-21T06:21:54.8132468Z   clean: true
+2026-05-21T06:21:54.8133055Z   sparse-checkout-cone-mode: true
+2026-05-21T06:21:54.8133660Z   fetch-depth: 1
+2026-05-21T06:21:54.8134353Z   fetch-tags: false
+2026-05-21T06:21:54.8134903Z   show-progress: true
+2026-05-21T06:21:54.8135410Z   lfs: false
+2026-05-21T06:21:54.8135888Z   submodules: false
+2026-05-21T06:21:54.8136399Z   set-safe-directory: true
+2026-05-21T06:21:54.8137215Z ##[endgroup]
+2026-05-21T06:21:54.9177399Z Syncing repository: yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.9179659Z ##[group]Getting Git version info
+2026-05-21T06:21:54.9180817Z Working directory is '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
+2026-05-21T06:21:54.9182293Z [command]/usr/bin/git version
+2026-05-21T06:21:54.9232489Z git version 2.54.0
+2026-05-21T06:21:54.9254871Z ##[endgroup]
+2026-05-21T06:21:54.9277167Z Temporarily overriding HOME='/home/runner/work/_temp/262804c6-7846-42c0-9dae-c212bf224b5a' before making global git config changes
+2026-05-21T06:21:54.9280458Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-21T06:21:54.9283043Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:54.9323384Z Deleting the contents of '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
+2026-05-21T06:21:54.9327297Z ##[group]Initializing the repository
+2026-05-21T06:21:54.9333032Z [command]/usr/bin/git init /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:54.9416658Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-21T06:21:54.9418449Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-21T06:21:54.9420759Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-21T06:21:54.9422463Z hint: call:
+2026-05-21T06:21:54.9423392Z hint:
+2026-05-21T06:21:54.9425040Z hint: 	git config --global init.defaultBranch <name>
+2026-05-21T06:21:54.9426481Z hint:
+2026-05-21T06:21:54.9427839Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-21T06:21:54.9429767Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-21T06:21:54.9431359Z hint:
+2026-05-21T06:21:54.9432489Z hint: 	git branch -m <name>
+2026-05-21T06:21:54.9433615Z hint:
+2026-05-21T06:21:54.9435176Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-21T06:21:54.9437912Z Initialized empty Git repository in /home/runner/work/temporal-devops-agent/temporal-devops-agent/.git/
+2026-05-21T06:21:54.9440056Z [command]/usr/bin/git remote add origin https://github.com/yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.9467637Z ##[endgroup]
+2026-05-21T06:21:54.9469364Z ##[group]Disabling automatic garbage collection
+2026-05-21T06:21:54.9471645Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-21T06:21:54.9495354Z ##[endgroup]
+2026-05-21T06:21:54.9497167Z ##[group]Setting up auth
+2026-05-21T06:21:54.9502638Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-21T06:21:54.9530912Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-21T06:21:54.9790530Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-21T06:21:54.9815673Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-21T06:21:54.9987439Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-21T06:21:55.0017856Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-21T06:21:55.0206001Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-21T06:21:55.0235696Z ##[endgroup]
+2026-05-21T06:21:55.0237585Z ##[group]Fetching the repository
+2026-05-21T06:21:55.0245228Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +dba26f694a0bd040ec18a80521e29b3a22d90651:refs/remotes/origin/main
+2026-05-21T06:21:55.4329329Z From https://github.com/yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:55.4331000Z  * [new ref]         dba26f694a0bd040ec18a80521e29b3a22d90651 -> origin/main
+2026-05-21T06:21:55.4364927Z ##[endgroup]
+2026-05-21T06:21:55.4366253Z ##[group]Determining the checkout info
+2026-05-21T06:21:55.4368127Z ##[endgroup]
+2026-05-21T06:21:55.4375238Z [command]/usr/bin/git sparse-checkout disable
+2026-05-21T06:21:55.4412966Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-21T06:21:55.4435644Z ##[group]Checking out the ref
+2026-05-21T06:21:55.4440645Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-21T06:21:55.4477050Z Switched to a new branch 'main'
+2026-05-21T06:21:55.4480714Z branch 'main' set up to track 'origin/main'.
+2026-05-21T06:21:55.4485730Z ##[endgroup]
+2026-05-21T06:21:55.4524821Z [command]/usr/bin/git log -1 --format=%H
+2026-05-21T06:21:55.4541971Z dba26f694a0bd040ec18a80521e29b3a22d90651
+2026-05-21T06:21:55.4822254Z ##[group]Run actions/setup-python@v5
+2026-05-21T06:21:55.4823271Z with:
+2026-05-21T06:21:55.4824064Z   python-version: 3.11
+2026-05-21T06:21:55.4824895Z   check-latest: false
+2026-05-21T06:21:55.4825954Z   token: ***
+2026-05-21T06:21:55.4826682Z   update-environment: true
+2026-05-21T06:21:55.4827574Z   allow-prereleases: false
+2026-05-21T06:21:55.4828609Z   freethreaded: false
+2026-05-21T06:21:55.4829391Z ##[endgroup]
+2026-05-21T06:21:55.6420025Z ##[group]Installed versions
+2026-05-21T06:21:55.6498490Z Successfully set up CPython (3.11.15)
+2026-05-21T06:21:55.6500529Z ##[endgroup]
+2026-05-21T06:21:55.6620018Z ##[group]Run python src/app.py
+2026-05-21T06:21:55.6621063Z [36;1mpython src/app.py[0m
+2026-05-21T06:21:55.6653535Z shell: /usr/bin/bash -e {0}
+2026-05-21T06:21:55.6654612Z env:
+2026-05-21T06:21:55.6655461Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6656943Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-21T06:21:55.6658433Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6659760Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6661096Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6662460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-21T06:21:55.6663630Z ##[endgroup]
+2026-05-21T06:21:55.6974715Z Traceback (most recent call last):
+2026-05-21T06:21:55.6981789Z   File "/home/runner/work/temporal-devops-agent/temporal-devops-agent/src/app.py", line 1, in <module>
+2026-05-21T06:21:55.6983674Z     import pandas
+2026-05-21T06:21:55.6984750Z ModuleNotFoundError: No module named 'pandas'
+2026-05-21T06:21:55.7010042Z ##[error]Process completed with exit code 1.
+2026-05-21T06:21:55.7194698Z Post job cleanup.
+2026-05-21T06:21:55.8129770Z [command]/usr/bin/git version
+2026-05-21T06:21:55.8162476Z git version 2.54.0
+2026-05-21T06:21:55.8204704Z Temporarily overriding HOME='/home/runner/work/_temp/61baefc2-6d2b-4dc8-aeb0-b49876f728e4' before making global git config changes
+2026-05-21T06:21:55.8209077Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-21T06:21:55.8219829Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:55.8249776Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-21T06:21:55.8278016Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-21T06:21:55.8453790Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-21T06:21:55.8474545Z http.https://github.com/.extraheader
+2026-05-21T06:21:55.8485612Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-21T06:21:55.8510946Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-21T06:21:55.8678909Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-21T06:21:55.8705300Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-21T06:21:55.8976357Z Cleaning up orphan processes
+2026-05-21T06:21:55.9287414Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
 
 ===== build/system.txt =====
-2026-05-20T09:00:49.1190000Z Evaluating build.if
-2026-05-20T09:00:49.1190000Z Evaluating: success()
-2026-05-20T09:00:49.1190000Z Result: true
-2026-05-20T09:00:49.1720000Z Requested labels: ubuntu-latest
-2026-05-20T09:00:49.1720000Z Job defined at: yatnallivikas/temporal-devops-agent/.github/workflows/python-ci.yml@refs/heads/main
-2026-05-20T09:00:49.1720000Z Waiting for a runner to pick up this job...
-2026-05-20T09:00:49.8460000Z Job is waiting for a hosted runner to come online.
-2026-05-20T09:00:49.8470000Z Job is about to start running on the hosted runner: GitHub Actions 1000000139
+2026-05-21T06:21:50.1980000Z Evaluating build.if
+2026-05-21T06:21:50.1980000Z Evaluating: success()
+2026-05-21T06:21:50.1980000Z Result: true
+2026-05-21T06:21:50.5410000Z Requested labels: ubuntu-latest
+2026-05-21T06:21:50.5410000Z Job defined at: yatnallivikas/temporal-devops-agent/.github/workflows/python-ci.yml@refs/heads/main
+2026-05-21T06:21:50.5410000Z Waiting for a runner to pick up this job...
+2026-05-21T06:21:50.5830000Z Job is waiting for a hosted runner to come online.
+2026-05-21T06:21:50.5830000Z Job is about to start running on the hosted runner: GitHub Actions 1000000140
 
 ===== build/1_Set up job.txt =====
-﻿2026-05-20T09:00:55.1231837Z Current runner version: '2.334.0'
-2026-05-20T09:00:55.1259495Z ##[group]Runner Image Provisioner
-2026-05-20T09:00:55.1260470Z Hosted Compute Agent
-2026-05-20T09:00:55.1261010Z Version: 20260213.493
-2026-05-20T09:00:55.1261636Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
-2026-05-20T09:00:55.1262294Z Build Date: 2026-02-13T00:28:41Z
-2026-05-20T09:00:55.1263104Z Worker ID: {465dd1ec-34c6-470c-a92f-dc76ab467603}
-2026-05-20T09:00:55.1263818Z Azure Region: northcentralus
-2026-05-20T09:00:55.1264532Z ##[endgroup]
-2026-05-20T09:00:55.1265967Z ##[group]Operating System
-2026-05-20T09:00:55.1266534Z Ubuntu
-2026-05-20T09:00:55.1267038Z 24.04.4
-2026-05-20T09:00:55.1267555Z LTS
-2026-05-20T09:00:55.1268044Z ##[endgroup]
-2026-05-20T09:00:55.1268508Z ##[group]Runner Image
-2026-05-20T09:00:55.1269109Z Image: ubuntu-24.04
-2026-05-20T09:00:55.1269646Z Version: 20260513.135.3
-2026-05-20T09:00:55.1270700Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
-2026-05-20T09:00:55.1272413Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
-2026-05-20T09:00:55.1273349Z ##[endgroup]
-2026-05-20T09:00:55.1274661Z ##[group]GITHUB_TOKEN Permissions
-2026-05-20T09:00:55.1276601Z Contents: read
-2026-05-20T09:00:55.1277200Z Metadata: read
-2026-05-20T09:00:55.1277756Z Packages: read
-2026-05-20T09:00:55.1278228Z ##[endgroup]
-2026-05-20T09:00:55.1280569Z Secret source: Actions
-2026-05-20T09:00:55.1281267Z Prepare workflow directory
-2026-05-20T09:00:55.1678545Z Prepare all required actions
-2026-05-20T09:00:55.1717453Z Getting action download info
-2026-05-20T09:00:55.6036077Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
-2026-05-20T09:00:55.7187964Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
-2026-05-20T09:00:55.9103085Z Complete job name: build
+﻿2026-05-21T06:21:53.9552218Z Current runner version: '2.334.0'
+2026-05-21T06:21:53.9575167Z ##[group]Runner Image Provisioner
+2026-05-21T06:21:53.9575984Z Hosted Compute Agent
+2026-05-21T06:21:53.9576459Z Version: 20260213.493
+2026-05-21T06:21:53.9577046Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-21T06:21:53.9577642Z Build Date: 2026-02-13T00:28:41Z
+2026-05-21T06:21:53.9578230Z Worker ID: {675e7552-2c8d-4077-9966-2af1c344bd75}
+2026-05-21T06:21:53.9578827Z Azure Region: westcentralus
+2026-05-21T06:21:53.9579354Z ##[endgroup]
+2026-05-21T06:21:53.9580555Z ##[group]Operating System
+2026-05-21T06:21:53.9581171Z Ubuntu
+2026-05-21T06:21:53.9581588Z 24.04.4
+2026-05-21T06:21:53.9581951Z LTS
+2026-05-21T06:21:53.9582401Z ##[endgroup]
+2026-05-21T06:21:53.9582804Z ##[group]Runner Image
+2026-05-21T06:21:53.9583266Z Image: ubuntu-24.04
+2026-05-21T06:21:53.9583742Z Version: 20260513.135.3
+2026-05-21T06:21:53.9584757Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-21T06:21:53.9586205Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-21T06:21:53.9586992Z ##[endgroup]
+2026-05-21T06:21:53.9587926Z ##[group]GITHUB_TOKEN Permissions
+2026-05-21T06:21:53.9589644Z Contents: read
+2026-05-21T06:21:53.9590114Z Metadata: read
+2026-05-21T06:21:53.9590561Z Packages: read
+2026-05-21T06:21:53.9591092Z ##[endgroup]
+2026-05-21T06:21:53.9593034Z Secret source: Actions
+2026-05-21T06:21:53.9593681Z Prepare workflow directory
+2026-05-21T06:21:53.9925813Z Prepare all required actions
+2026-05-21T06:21:53.9980238Z Getting action download info
+2026-05-21T06:21:54.4461263Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-05-21T06:21:54.5963088Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-05-21T06:21:54.7488547Z Complete job name: build
 
 
 ===== build/2_Checkout Repository.txt =====
-﻿2026-05-20T09:00:55.9840709Z ##[group]Run actions/checkout@v4
-2026-05-20T09:00:55.9841665Z with:
-2026-05-20T09:00:55.9842197Z   repository: yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:55.9843097Z   token: ***
-2026-05-20T09:00:55.9843519Z   ssh-strict: true
-2026-05-20T09:00:55.9843959Z   ssh-user: git
-2026-05-20T09:00:55.9844620Z   persist-credentials: true
-2026-05-20T09:00:55.9845092Z   clean: true
-2026-05-20T09:00:55.9845536Z   sparse-checkout-cone-mode: true
-2026-05-20T09:00:55.9846052Z   fetch-depth: 1
-2026-05-20T09:00:55.9846477Z   fetch-tags: false
-2026-05-20T09:00:55.9846904Z   show-progress: true
-2026-05-20T09:00:55.9847354Z   lfs: false
-2026-05-20T09:00:55.9847742Z   submodules: false
-2026-05-20T09:00:55.9848183Z   set-safe-directory: true
-2026-05-20T09:00:55.9848878Z ##[endgroup]
-2026-05-20T09:00:56.1033744Z Syncing repository: yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.1037291Z ##[group]Getting Git version info
-2026-05-20T09:00:56.1038776Z Working directory is '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
-2026-05-20T09:00:56.1040636Z [command]/usr/bin/git version
-2026-05-20T09:00:56.1107313Z git version 2.54.0
-2026-05-20T09:00:56.1132928Z ##[endgroup]
-2026-05-20T09:00:56.1149129Z Temporarily overriding HOME='/home/runner/work/_temp/174c16c3-9c2e-4003-9e48-c7ba1e932ca4' before making global git config changes
-2026-05-20T09:00:56.1150568Z Adding repository directory to the temporary git global config as a safe directory
-2026-05-20T09:00:56.1163241Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:56.1214635Z Deleting the contents of '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
-2026-05-20T09:00:56.1218295Z ##[group]Initializing the repository
-2026-05-20T09:00:56.1222874Z [command]/usr/bin/git init /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:56.1319991Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-05-20T09:00:56.1321426Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-05-20T09:00:56.1322956Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-05-20T09:00:56.1324392Z hint: call:
-2026-05-20T09:00:56.1325436Z hint:
-2026-05-20T09:00:56.1326232Z hint: 	git config --global init.defaultBranch <name>
-2026-05-20T09:00:56.1327260Z hint:
-2026-05-20T09:00:56.1327982Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-05-20T09:00:56.1328938Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-05-20T09:00:56.1329694Z hint:
-2026-05-20T09:00:56.1330087Z hint: 	git branch -m <name>
-2026-05-20T09:00:56.1330558Z hint:
-2026-05-20T09:00:56.1331162Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-05-20T09:00:56.1332742Z Initialized empty Git repository in /home/runner/work/temporal-devops-agent/temporal-devops-agent/.git/
-2026-05-20T09:00:56.1339939Z [command]/usr/bin/git remote add origin https://github.com/yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.1387298Z ##[endgroup]
-2026-05-20T09:00:56.1388117Z ##[group]Disabling automatic garbage collection
-2026-05-20T09:00:56.1391577Z [command]/usr/bin/git config --local gc.auto 0
-2026-05-20T09:00:56.1427292Z ##[endgroup]
-2026-05-20T09:00:56.1428544Z ##[group]Setting up auth
-2026-05-20T09:00:56.1434673Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-05-20T09:00:56.1475669Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-05-20T09:00:56.1849383Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-05-20T09:00:56.1885370Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-05-20T09:00:56.2142455Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-05-20T09:00:56.2184990Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-05-20T09:00:56.2435286Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-05-20T09:00:56.2473965Z ##[endgroup]
-2026-05-20T09:00:56.2475589Z ##[group]Fetching the repository
-2026-05-20T09:00:56.2484507Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +13de75476c8f38054b1e72da5a7d3918e438218e:refs/remotes/origin/main
-2026-05-20T09:00:56.5561885Z From https://github.com/yatnallivikas/temporal-devops-agent
-2026-05-20T09:00:56.5563277Z  * [new ref]         13de75476c8f38054b1e72da5a7d3918e438218e -> origin/main
-2026-05-20T09:00:56.5597323Z ##[endgroup]
-2026-05-20T09:00:56.5600511Z ##[group]Determining the checkout info
-2026-05-20T09:00:56.5601769Z ##[endgroup]
-2026-05-20T09:00:56.5605187Z [command]/usr/bin/git sparse-checkout disable
-2026-05-20T09:00:56.5649397Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-05-20T09:00:56.5677602Z ##[group]Checking out the ref
-2026-05-20T09:00:56.5680638Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-05-20T09:00:56.5727039Z Switched to a new branch 'main'
-2026-05-20T09:00:56.5729376Z branch 'main' set up to track 'origin/main'.
-2026-05-20T09:00:56.5737204Z ##[endgroup]
-2026-05-20T09:00:56.5776717Z [command]/usr/bin/git log -1 --format=%H
-2026-05-20T09:00:56.5800491Z 13de75476c8f38054b1e72da5a7d3918e438218e
+﻿2026-05-21T06:21:54.8127904Z ##[group]Run actions/checkout@v4
+2026-05-21T06:21:54.8128876Z with:
+2026-05-21T06:21:54.8129508Z   repository: yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.8130413Z   token: ***
+2026-05-21T06:21:54.8130881Z   ssh-strict: true
+2026-05-21T06:21:54.8131415Z   ssh-user: git
+2026-05-21T06:21:54.8131877Z   persist-credentials: true
+2026-05-21T06:21:54.8132464Z   clean: true
+2026-05-21T06:21:54.8133017Z   sparse-checkout-cone-mode: true
+2026-05-21T06:21:54.8133657Z   fetch-depth: 1
+2026-05-21T06:21:54.8134348Z   fetch-tags: false
+2026-05-21T06:21:54.8134892Z   show-progress: true
+2026-05-21T06:21:54.8135406Z   lfs: false
+2026-05-21T06:21:54.8135884Z   submodules: false
+2026-05-21T06:21:54.8136395Z   set-safe-directory: true
+2026-05-21T06:21:54.8137208Z ##[endgroup]
+2026-05-21T06:21:54.9177323Z Syncing repository: yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.9179624Z ##[group]Getting Git version info
+2026-05-21T06:21:54.9180579Z Working directory is '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
+2026-05-21T06:21:54.9182286Z [command]/usr/bin/git version
+2026-05-21T06:21:54.9232444Z git version 2.54.0
+2026-05-21T06:21:54.9254853Z ##[endgroup]
+2026-05-21T06:21:54.9277117Z Temporarily overriding HOME='/home/runner/work/_temp/262804c6-7846-42c0-9dae-c212bf224b5a' before making global git config changes
+2026-05-21T06:21:54.9280411Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-21T06:21:54.9282988Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:54.9323341Z Deleting the contents of '/home/runner/work/temporal-devops-agent/temporal-devops-agent'
+2026-05-21T06:21:54.9327280Z ##[group]Initializing the repository
+2026-05-21T06:21:54.9333015Z [command]/usr/bin/git init /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:54.9416590Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-21T06:21:54.9418417Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-21T06:21:54.9420736Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-21T06:21:54.9422444Z hint: call:
+2026-05-21T06:21:54.9423377Z hint:
+2026-05-21T06:21:54.9425015Z hint: 	git config --global init.defaultBranch <name>
+2026-05-21T06:21:54.9426468Z hint:
+2026-05-21T06:21:54.9427828Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-21T06:21:54.9429745Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-21T06:21:54.9431342Z hint:
+2026-05-21T06:21:54.9432472Z hint: 	git branch -m <name>
+2026-05-21T06:21:54.9433601Z hint:
+2026-05-21T06:21:54.9435162Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-21T06:21:54.9437891Z Initialized empty Git repository in /home/runner/work/temporal-devops-agent/temporal-devops-agent/.git/
+2026-05-21T06:21:54.9440025Z [command]/usr/bin/git remote add origin https://github.com/yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:54.9467602Z ##[endgroup]
+2026-05-21T06:21:54.9469343Z ##[group]Disabling automatic garbage collection
+2026-05-21T06:21:54.9471610Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-21T06:21:54.9495315Z ##[endgroup]
+2026-05-21T06:21:54.9497147Z ##[group]Setting up auth
+2026-05-21T06:21:54.9502594Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-21T06:21:54.9530864Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-21T06:21:54.9790467Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-21T06:21:54.9815267Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-21T06:21:54.9987384Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-21T06:21:55.0017804Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-21T06:21:55.0205948Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-21T06:21:55.0235650Z ##[endgroup]
+2026-05-21T06:21:55.0237563Z ##[group]Fetching the repository
+2026-05-21T06:21:55.0245178Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +dba26f694a0bd040ec18a80521e29b3a22d90651:refs/remotes/origin/main
+2026-05-21T06:21:55.4329256Z From https://github.com/yatnallivikas/temporal-devops-agent
+2026-05-21T06:21:55.4330990Z  * [new ref]         dba26f694a0bd040ec18a80521e29b3a22d90651 -> origin/main
+2026-05-21T06:21:55.4364881Z ##[endgroup]
+2026-05-21T06:21:55.4366172Z ##[group]Determining the checkout info
+2026-05-21T06:21:55.4368109Z ##[endgroup]
+2026-05-21T06:21:55.4375223Z [command]/usr/bin/git sparse-checkout disable
+2026-05-21T06:21:55.4412929Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-05-21T06:21:55.4435615Z ##[group]Checking out the ref
+2026-05-21T06:21:55.4440627Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-05-21T06:21:55.4477007Z Switched to a new branch 'main'
+2026-05-21T06:21:55.4480679Z branch 'main' set up to track 'origin/main'.
+2026-05-21T06:21:55.4485702Z ##[endgroup]
+2026-05-21T06:21:55.4524785Z [command]/usr/bin/git log -1 --format=%H
+2026-05-21T06:21:55.4541934Z dba26f694a0bd040ec18a80521e29b3a22d90651
 
 
 ===== build/3_Setup Python.txt =====
-﻿2026-05-20T09:00:56.6139274Z ##[group]Run actions/setup-python@v5
-2026-05-20T09:00:56.6140477Z with:
-2026-05-20T09:00:56.6141290Z   python-version: 3.11
-2026-05-20T09:00:56.6142226Z   check-latest: false
-2026-05-20T09:00:56.6143461Z   token: ***
-2026-05-20T09:00:56.6144455Z   update-environment: true
-2026-05-20T09:00:56.6145493Z   allow-prereleases: false
-2026-05-20T09:00:56.6146761Z   freethreaded: false
-2026-05-20T09:00:56.6147685Z ##[endgroup]
-2026-05-20T09:00:56.7922186Z ##[group]Installed versions
-2026-05-20T09:00:56.8015016Z Successfully set up CPython (3.11.15)
-2026-05-20T09:00:56.8017360Z ##[endgroup]
+﻿2026-05-21T06:21:55.4822234Z ##[group]Run actions/setup-python@v5
+2026-05-21T06:21:55.4823265Z with:
+2026-05-21T06:21:55.4824057Z   python-version: 3.11
+2026-05-21T06:21:55.4824890Z   check-latest: false
+2026-05-21T06:21:55.4825950Z   token: ***
+2026-05-21T06:21:55.4826677Z   update-environment: true
+2026-05-21T06:21:55.4827571Z   allow-prereleases: false
+2026-05-21T06:21:55.4828605Z   freethreaded: false
+2026-05-21T06:21:55.4829386Z ##[endgroup]
+2026-05-21T06:21:55.6419960Z ##[group]Installed versions
+2026-05-21T06:21:55.6498444Z Successfully set up CPython (3.11.15)
+2026-05-21T06:21:55.6500517Z ##[endgroup]
 
 
 ===== build/4_Run Application.txt =====
-﻿2026-05-20T09:00:56.8177488Z ##[group]Run python src/app.py
-2026-05-20T09:00:56.8178619Z [36;1mpython src/app.py[0m
-2026-05-20T09:00:56.8234314Z shell: /usr/bin/bash -e {0}
-2026-05-20T09:00:56.8235314Z env:
-2026-05-20T09:00:56.8236279Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8237995Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
-2026-05-20T09:00:56.8239695Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8241208Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8242750Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
-2026-05-20T09:00:56.8244468Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
-2026-05-20T09:00:56.8245792Z ##[endgroup]
-2026-05-20T09:00:56.8661585Z Traceback (most recent call last):
-2026-05-20T09:00:56.8672339Z   File "/home/runner/work/temporal-devops-agent/temporal-devops-agent/src/app.py", line 1, in <module>
-2026-05-20T09:00:56.8675779Z     import pandas
-2026-05-20T09:00:56.8677341Z ModuleNotFoundError: No module named 'pandas'
-2026-05-20T09:00:56.8712133Z ##[error]Process completed with exit code 1.
+﻿2026-05-21T06:21:55.6619990Z ##[group]Run python src/app.py
+2026-05-21T06:21:55.6621058Z [36;1mpython src/app.py[0m
+2026-05-21T06:21:55.6653511Z shell: /usr/bin/bash -e {0}
+2026-05-21T06:21:55.6654606Z env:
+2026-05-21T06:21:55.6655455Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6656937Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-05-21T06:21:55.6658429Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6659754Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6661092Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-05-21T06:21:55.6662455Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-05-21T06:21:55.6663625Z ##[endgroup]
+2026-05-21T06:21:55.6974669Z Traceback (most recent call last):
+2026-05-21T06:21:55.6981753Z   File "/home/runner/work/temporal-devops-agent/temporal-devops-agent/src/app.py", line 1, in <module>
+2026-05-21T06:21:55.6983606Z     import pandas
+2026-05-21T06:21:55.6984743Z ModuleNotFoundError: No module named 'pandas'
+2026-05-21T06:21:55.7010009Z ##[error]Process completed with exit code 1.
 
 
 ===== build/8_Post Checkout Repository.txt =====
-﻿2026-05-20T09:00:56.8922711Z Post job cleanup.
-2026-05-20T09:00:56.9963326Z [command]/usr/bin/git version
-2026-05-20T09:00:57.0000741Z git version 2.54.0
-2026-05-20T09:00:57.0043921Z Temporarily overriding HOME='/home/runner/work/_temp/bb9ab0f5-5b66-4bdb-949e-61d9b94002aa' before making global git config changes
-2026-05-20T09:00:57.0125662Z Adding repository directory to the temporary git global config as a safe directory
-2026-05-20T09:00:57.0129329Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
-2026-05-20T09:00:57.0135401Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-05-20T09:00:57.0141572Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-05-20T09:00:57.0376488Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-05-20T09:00:57.0403346Z http.https://github.com/.extraheader
-2026-05-20T09:00:57.0418983Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2026-05-20T09:00:57.0456440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-05-20T09:00:57.0704660Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-05-20T09:00:57.0741509Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+﻿2026-05-21T06:21:55.7194679Z Post job cleanup.
+2026-05-21T06:21:55.8129701Z [command]/usr/bin/git version
+2026-05-21T06:21:55.8162424Z git version 2.54.0
+2026-05-21T06:21:55.8204661Z Temporarily overriding HOME='/home/runner/work/_temp/61baefc2-6d2b-4dc8-aeb0-b49876f728e4' before making global git config changes
+2026-05-21T06:21:55.8209049Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-21T06:21:55.8219789Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/temporal-devops-agent/temporal-devops-agent
+2026-05-21T06:21:55.8249742Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-21T06:21:55.8277986Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-21T06:21:55.8453649Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-21T06:21:55.8474504Z http.https://github.com/.extraheader
+2026-05-21T06:21:55.8485590Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-21T06:21:55.8510902Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-21T06:21:55.8678867Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-21T06:21:55.8705257Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
 
 
 ===== build/9_Complete job.txt =====
-﻿2026-05-20T09:00:57.1123262Z Cleaning up orphan processes
-2026-05-20T09:00:57.1510267Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+﻿2026-05-21T06:21:55.8976328Z Cleaning up orphan processes
+2026-05-21T06:21:55.9287364Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
